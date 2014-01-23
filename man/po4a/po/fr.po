@@ -1,67 +1,68 @@
 # Traduction des pages de manuel de base-passwd avec po4a
 # Copyright (C) 2004 Nicolas FRANCOIS
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: base-passwd\n"
-"POT-Creation-Date: 2005-08-08  1:27+0200\n"
+"POT-Creation-Date: 2010-11-22 11:40+0000\n"
 "PO-Revision-Date: 2005-08-08  1:29+0200\n"
 "Last-Translator: Nicolas François <nicolas.francois@centraliens.net>\n"
 "Language-Team: Debian French Team <debian-l10n-french@lists.debian.org>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# type: TH
+#. type: TH
 #: ../update-passwd.8:1
 #, no-wrap
 msgid "UPDATE-PASSWD"
 msgstr "UPDATE-PASSWD"
 
-# type: TH
+#. type: TH
 #: ../update-passwd.8:1
 #, no-wrap
 msgid "Debian tools"
 msgstr "Utilitaires Debian"
 
-# type: TH
+#. type: TH
 #: ../update-passwd.8:1
 #, no-wrap
 msgid "DEBIAN"
 msgstr "DEBIAN"
 
-# type: SH
+#. type: SH
 #: ../update-passwd.8:2
 #, no-wrap
 msgid "NAME"
 msgstr "NOM"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:4
 msgid "update-passwd - safely update /etc/passwd, /etc/shadow and /etc/group"
 msgstr ""
 "update-passwd - met à jour /etc/passwd, /etc/shadow et /etc/group de façon "
 "sécurisée"
 
-# type: SH
+#. type: SH
 #: ../update-passwd.8:4
 #, no-wrap
 msgid "SYNOPSIS"
 msgstr "SYNOPSIS"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:7
 msgid "B<update-passwd> [I<options>]"
 msgstr "B<update-passwd> [I<options>]"
 
-# type: SH
+#. type: SH
 #: ../update-passwd.8:7
 #, no-wrap
 msgid "DESCRIPTION"
 msgstr "DESCRIPTION"
 
 # NOTE: c'est étonnant pour 0 (root)
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:14
 msgid ""
 "B<update-passwd> handles updates of /etc/passwd, /etc/shadow and /etc/group "
@@ -74,13 +75,13 @@ msgstr ""
 "originaux distribués avec le paquet base-passwd, et met à jour toutes les "
 "entrées allouées globalement par le projet Debian (c'est-à-dire de 0 à 99)."
 
-# type: SH
+#. type: SH
 #: ../update-passwd.8:15
 #, no-wrap
 msgid "OPTIONS"
 msgstr "OPTIONS"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:19
 msgid ""
 "B<update-passwd> follows the usual GNU command line syntax, with long "
@@ -89,7 +90,7 @@ msgstr ""
 "B<update-passwd> suit la syntaxe usuelle des commandes GNU, avec les options "
 "longues commençant par deux tirets («\\ -\\ »)."
 
-# type: TP
+#. type: TP
 #: ../update-passwd.8:19
 #, no-wrap
 msgid "B<-p>,\\ B<--passwd-master=FILE>"
@@ -97,7 +98,7 @@ msgstr "B<-p>, B<--passwd-master=FICHIER>"
 
 # NOTE: j'ésite à traduire passwd. Il ne s'agit pas des mots de pase, mais
 #       de tout ce qu'il y a autour.
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:24
 msgid ""
 "Use FILE as the master copy of the passwd database.  The default value is I</"
@@ -106,13 +107,13 @@ msgstr ""
 "Utilise FICHIER comme original de la base de données «\\ passwd\\ ». La "
 "valeur par défaut est I</usr/share/base-passwd/passwd.master>."
 
-# type: TP
+#. type: TP
 #: ../update-passwd.8:24
 #, no-wrap
 msgid "B<-g>,\\ B<--group-master=FILE>"
 msgstr "B<-g>, B<--group-master=FICHIER>"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:29
 msgid ""
 "Use FILE as the master copy of the group database.  The default value is I</"
@@ -121,13 +122,13 @@ msgstr ""
 "Utilise FICHIER comme original de la base de données «\\ group\\ ». La "
 "valeur par défaut est I</usr/share/base-passwd/group.master>."
 
-# type: TP
+#. type: TP
 #: ../update-passwd.8:29
 #, no-wrap
 msgid "B<-P>,\\ B<--passwd=FILE>"
 msgstr "B<-P>, B<--passwd=FICHIER>"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:34
 msgid ""
 "Use FILE as the system passwd database.  The default value is I</etc/passwd>."
@@ -135,13 +136,13 @@ msgstr ""
 "Utilise FICHIER comme base de données «\\ passwd\\ » du système. La valeur "
 "par défaut est I</etc/passwd>."
 
-# type: TP
+#. type: TP
 #: ../update-passwd.8:34
 #, no-wrap
 msgid "B<-S>,\\ B<--shadow=FILE>"
 msgstr "B<-S>, B<--shadow=FICHIER>"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:39
 msgid ""
 "Use FILE as the system shadow database.  The default value is I</etc/shadow>."
@@ -149,13 +150,13 @@ msgstr ""
 "Utilise FICHIER comme base de données «\\ shadow\\ » du système. La valeur "
 "par défaut est I</etc/shadow>."
 
-# type: TP
+#. type: TP
 #: ../update-passwd.8:39
 #, no-wrap
 msgid "B<-G>,\\ B<--group=FILE>"
 msgstr "B<-G>, B<--group=FICHIER>"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:44
 msgid ""
 "Use FILE as the system group database.  The default value is I</etc/group>."
@@ -163,50 +164,50 @@ msgstr ""
 "Utilise FICHIER comme base de données «\\ group\\ » du système. La valeur "
 "par défaut est I</etc/group>."
 
-# type: TP
+#. type: TP
 #: ../update-passwd.8:44
 #, no-wrap
 msgid "B<-s>,\\ B<--sanity-check>"
 msgstr "B<-s>, B<--sanity-check>"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:47
 msgid "Only perform sanity-checks but don't do anything."
 msgstr "Ne réalise que les tests de contrôle, mais ne touche à rien."
 
-# type: TP
+#. type: TP
 #: ../update-passwd.8:47
 #, no-wrap
 msgid "B<-v>,\\ B<--verbose>"
 msgstr "B<-v>, B<--verbose>"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:51
 msgid ""
-"Give detailed information about we are doing.  A second -v gives additional "
+"Give detailed information about what we are doing.  A second -v gives additional "
 "detail."
 msgstr ""
 "Donne des informations précises sur ce qui est réalisé. Un second B<-v> "
 "donne encore plus de précisions."
 
-# type: TP
+#. type: TP
 #: ../update-passwd.8:51
 #, no-wrap
 msgid "B<-n>,\\ B<--dry-run>"
 msgstr "B<-n>, B<--dry-run>"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:54
 msgid "Don't do anything but only show what we would do."
 msgstr "Ne fait rien, montre seulement ce qui va être fait."
 
-# type: TP
+#. type: TP
 #: ../update-passwd.8:54
 #, no-wrap
 msgid "B<-L>,\\ B<--no-locking>"
 msgstr "B<-L>, B<--no-locking>"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:59
 msgid ""
 "Don't attempt to lock the account database.  This should only be used for "
@@ -217,35 +218,35 @@ msgstr ""
 "devrait être utilisée qu'à des fins de débogage. B<J'insiste\\ : n'utilisez "
 "pas cette option à moins d'être vraiment sûr d'en avoir besoin\\ !>"
 
-# type: TP
+#. type: TP
 #: ../update-passwd.8:59
 #, no-wrap
 msgid "B<-h>,\\ B<--help>"
 msgstr "B<-h>, B<--help>"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:63
 msgid "Show a summary of how to use B<update-passwd>."
 msgstr "Affiche un résumé d'aide pour l'utilisation de B<update-passwd>."
 
-# type: TP
+#. type: TP
 #: ../update-passwd.8:63
 #, no-wrap
 msgid "B<-V>,\\ B<--version>"
 msgstr "B<-V>, B<--version>"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:66
 msgid "Show the version number"
 msgstr "Affiche le numéro de version."
 
-# type: SH
+#. type: SH
 #: ../update-passwd.8:66
 #, no-wrap
 msgid "BUGS"
 msgstr "BOGUES"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:72
 msgid ""
 "At this moment B<update-passwd> does not verify the shadow-file.  It should "
@@ -257,22 +258,22 @@ msgstr ""
 "vice versa, et que les mots de passe ne sont pas présents dans les deux "
 "fichiers."
 
-# type: SH
+#. type: SH
 #: ../update-passwd.8:72
 #, no-wrap
 msgid "AUTHOR"
 msgstr "AUTEUR"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:74
 msgid "Wichert Akkerman E<lt>wakkerma@debian.orgE<gt>"
 msgstr "Wichert Akkerman E<lt>wakkerma@debian.orgE<gt>"
 
-# type: Plain text
+#. type: Plain text
 #: ../update-passwd.8:78
 msgid ""
-"This program was written for the Debian project, and is copyright 1999"
-"\\(en2002 Wichert Akkerman and copyright 2002, 2003 Colin Watson.  It is "
+"This program was written for the Debian project, and is copyright "
+"1999\\(en2002 Wichert Akkerman and copyright 2002, 2003 Colin Watson.  It is "
 "distributed under version 2 of the GNU General Public License."
 msgstr ""
 "Ce programme a été écrit pour le projet Debian, et est placé sous le "

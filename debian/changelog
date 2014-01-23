@@ -1,3 +1,50 @@
+base-passwd (3.5.26) unstable; urgency=low
+
+  * Build-depend on dpkg (>= 1.16.4) | sgml-base (<< 1.26+nmu2) to ensure
+    that #675613 does not cause incorrect generation of documentation
+    (closes: #678570).
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 23 Jun 2012 09:35:04 +0100
+
+base-passwd (3.5.25) unstable; urgency=low
+
+  * users-and-groups: Document historical meaning of sys user/group (thanks
+    to Mantas M. for the tip).
+  * Use dpkg-buildflags to enable hardening options (based on a patch from
+    Moritz Muehlenhoff; closes: #655501).
+  * Update users-and-groups documentation of the sudo group to describe
+    current behaviour and mention pkexec (thanks, Luca Capello; closes:
+    #650553).
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 22 Jun 2012 11:40:25 +0100
+
+base-passwd (3.5.24) unstable; urgency=low
+
+  * Mark base-passwd Multi-Arch: foreign.
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 26 Nov 2011 13:13:39 +0000
+
+base-passwd (3.5.23) unstable; urgency=low
+
+  * Convert to source format 3.0 (native).
+  * Update to current DEP-5 copyright proposal (thanks, Kyle Nitzsche; part
+    of LP #610108).
+  * Remove unused Lintian overrides.
+  * Add translations of update-passwd(8):
+    - Spanish (thanks, Omar Campagne; closes: #604455).
+    - Japanese (thanks, KURASAWA Nozomu; closes: #614377).
+    - German (thanks, Helge Kreutzmann; closes: #625898).
+  * Allocate gid 64040-64044 (grsec-tpe, grsec-sock-all, grsec-sock-clt,
+    grsec-sock-srv, grsec-proc) for linux-grsec-base, by request of
+    Yves-Alexis Perez.
+  * Update Vcs-Bzr field for Alioth changes.
+  * Allow cross-building (thanks, Peter Pearse and Wookey; closes: #631954).
+  * Add build-arch and build-indep targets.
+  * Fix typo in description of -v in update-passwd(8), and unfuzzy
+    translations (thanks, Helge Kreutzmann; closes: #625900).
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 16 Jul 2011 12:52:47 +0100
+
 base-passwd (3.5.22) unstable; urgency=low
 
   * Compress files using gzip -n (cf. debhelper 6.0.6).

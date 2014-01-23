@@ -1,4 +1,4 @@
-LANGS := fr
+LANGS := de es fr ja ru
 MANFILES := $(foreach ll,$(LANGS),update-passwd.$(ll).8)
 
 all: $(MANFILES)

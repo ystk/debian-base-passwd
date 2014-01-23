@@ -13,15 +13,21 @@ DEB_BUILD_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 
 ifeq ($(DEB_BUILD_GNU_TYPE),$(DEB_HOST_GNU_TYPE))
   confflags += --build=$(DEB_HOST_GNU_TYPE)
+  STRIP = strip
 else
   confflags += --build=$(DEB_BUILD_GNU_TYPE) --host=$(DEB_HOST_GNU_TYPE)
+  STRIP = $(DEB_HOST_GNU_TYPE)-strip
 endif
 
-.PHONY: all build
-all build: Makefile
+.PHONY: all build build-arch
+all build build-arch: Makefile
 	$(MAKE) 
 	$(MAKE) -C doc
 	$(MAKE) -C man
+
+.PHONY: build-indep
+build-indep:
+	@echo Nothing to do
 
 .PHONY: clean
 clean:
@@ -33,14 +39,13 @@ clean:
 	$(MAKE) -C man clean
 	rm -rf debian/tmp debian/files debian/substvars
 
-ifeq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
-CFLAGS := -g -O2 -Wall
-else
-CFLAGS := -g -Wall
-endif
+CFLAGS = $(shell dpkg-buildflags --get CFLAGS)
+CFLAGS += $(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS += -Wall
+LDFLAGS = $(shell dpkg-buildflags --get LDFLAGS)
 
 Makefile: Makefile.in configure.ac
-	CFLAGS="$(CFLAGS)" ./configure $(confflags)
+	CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" ./configure $(confflags)
 
 .PHONY: binary
 binary: binary-arch binary-indep
@@ -58,25 +63,37 @@ binary-arch: build
 	install -p -m 755 -o root -g root update-passwd debian/tmp/usr/sbin/
 
 ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
-	strip --strip-unneeded --remove-section=.comment \
+	$(STRIP) --strip-unneeded --remove-section=.comment \
 		--remove-section=.note debian/tmp/usr/sbin/update-passwd
 endif
 
 	install -d -m 755 -o root -g root \
 		debian/tmp/usr/share/man/man8 \
+		debian/tmp/usr/share/man/de/man8 \
+		debian/tmp/usr/share/man/es/man8 \
 		debian/tmp/usr/share/man/fr/man8 \
+		debian/tmp/usr/share/man/ja/man8 \
 		debian/tmp/usr/share/man/pl/man8 \
 		debian/tmp/usr/share/man/ru/man8
 	install -p -m 644 -o root -g root man/update-passwd.8 \
 		debian/tmp/usr/share/man/man8/
+	install -p -m 644 -o root -g root man/update-passwd.de.8 \
+		debian/tmp/usr/share/man/de/man8/update-passwd.8
+	install -p -m 644 -o root -g root man/update-passwd.es.8 \
+		debian/tmp/usr/share/man/es/man8/update-passwd.8
 	install -p -m 644 -o root -g root man/update-passwd.fr.8 \
 		debian/tmp/usr/share/man/fr/man8/update-passwd.8
+	install -p -m 644 -o root -g root man/update-passwd.ja.8 \
+		debian/tmp/usr/share/man/ja/man8/update-passwd.8
 	install -p -m 644 -o root -g root man/update-passwd.pl.8 \
 		debian/tmp/usr/share/man/pl/man8/update-passwd.8
 	install -p -m 644 -o root -g root man/update-passwd.ru.8 \
 		debian/tmp/usr/share/man/ru/man8/update-passwd.8
 	gzip -9n debian/tmp/usr/share/man/man8/* \
+		debian/tmp/usr/share/man/de/man8/* \
+		debian/tmp/usr/share/man/es/man8/* \
 		debian/tmp/usr/share/man/fr/man8/* \
+		debian/tmp/usr/share/man/ja/man8/* \
 		debian/tmp/usr/share/man/pl/man8/* \
 		debian/tmp/usr/share/man/ru/man8/*
 
@@ -99,10 +116,6 @@ endif
 	install -d -m 755 -o root -g root debian/tmp/usr/share/doc-base
 	install -p -m 644 -o root -g root debian/doc-base \
 		debian/tmp/usr/share/doc-base/users-and-groups
-
-	install -d -m 755 -o root -g root debian/tmp/usr/share/lintian/overrides
-	install -p -m 644 -o root -g root debian/lintian \
-		debian/tmp/usr/share/lintian/overrides/base-passwd
 
 	install -d -m 755 -o root -g root debian/tmp/DEBIAN
 	install -p -m 755 -o root -g root debian/postinst debian/tmp/DEBIAN/
