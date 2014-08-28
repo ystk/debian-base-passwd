@@ -1,18 +1,21 @@
-# Translation of base-passwd man page template to German
-# Copyright (C) Helge Kreutzmann <debian@helgefjell.de>, 2011, 2014.
+# Translation of base-passwd's manpage to European Portuguese
+# Copyright (C) 2014 the base-passwd's copyright holder.
 # This file is distributed under the same license as the base-passwd package.
 #
+# Américo Monteiro <a_monteiro@gmx.com>, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: base passwd man page 3.5.30\n"
+"Project-Id-Version: base-passwd manpage 3.5.30\n"
 "POT-Creation-Date: 2014-01-07 14:00+0000\n"
-"PO-Revision-Date: 2014-01-13 10:17+0100\n"
-"Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
-"Language-Team: de <debian-l10n-german@lists.debian.org>\n"
-"Language: de\n"
+"PO-Revision-Date: 2014-01-14 00:36+0000\n"
+"Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
+"Language-Team: Portuguese <traduz@debianpt.org>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: utf-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.4\n"
 
 # type: TH
 #. type: TH
@@ -26,7 +29,7 @@ msgstr "UPDATE-PASSWD"
 #: ../update-passwd.8:1
 #, no-wrap
 msgid "Debian tools"
-msgstr "Debian-Werkzeuge"
+msgstr "Ferramentas Debian"
 
 # type: TH
 #. type: TH
@@ -40,34 +43,34 @@ msgstr "DEBIAN"
 #: ../update-passwd.8:2
 #, no-wrap
 msgid "NAME"
-msgstr "NAME"
+msgstr "NOME"
 
 # type: Plain text
 #. type: Plain text
 #: ../update-passwd.8:4
 msgid "update-passwd - safely update /etc/passwd, /etc/shadow and /etc/group"
 msgstr ""
-"update-passwd - /etc/passwd, /etc/shadow und /etc/group sicher aktualisieren"
+"update-passwd - actualiza em segurança /etc/passwd, /etc/shadow e /etc/group"
 
 # type: SH
 #. type: SH
 #: ../update-passwd.8:4
 #, no-wrap
 msgid "SYNOPSIS"
-msgstr "ÜBERSICHT"
+msgstr "SINOPSE"
 
 # type: Plain text
 #. type: Plain text
 #: ../update-passwd.8:7
 msgid "B<update-passwd> [I<options>]"
-msgstr "B<update-passwd> [I<Optionen>]"
+msgstr "B<update-passwd> [I<opções>]"
 
 # type: SH
 #. type: SH
 #: ../update-passwd.8:7
 #, no-wrap
 msgid "DESCRIPTION"
-msgstr "BESCHREIBUNG"
+msgstr "DESCRIÇÃO"
 
 # type: Plain text
 #. type: Plain text
@@ -78,18 +81,17 @@ msgid ""
 "distributed in the base-passwd package, and updates all entries in the "
 "global system range (that is, 0\\(en99)."
 msgstr ""
-"B<update-passwd> kümmert sich um Aktualisierungen von /etc/passwd, /etc/"
-"shadow und /etc/group in laufenden Debian-Systemen. Es vergleicht die "
-"aktuellen Dateien mit Kopiervorlagen, die im Paket base-passwd verteilt "
-"werden, und aktualisiert alle Einträge in dem globalen Systembereich (d.h. "
-"0\\(en99)."
+"B<update-passwd> lida com actualizações de /etc/passwd, /etc/shadow e /etc/"
+"group em sistemas Debian em funcionamento. Compara os ficheiros actuais com "
+"cópias mestre, distribuídas no pacote base-passwd, e actualiza todas as "
+"entradas no alcance global do sistema (isto é 0\\(en99)."
 
 # type: SH
 #. type: SH
 #: ../update-passwd.8:15
 #, no-wrap
 msgid "OPTIONS"
-msgstr "OPTIONEN"
+msgstr "OPÇÕES"
 
 # type: Plain text
 #. type: Plain text
@@ -98,15 +100,15 @@ msgid ""
 "B<update-passwd> follows the usual GNU command line syntax, with long "
 "options starting with two dashes (\\(oq-\\(cq)."
 msgstr ""
-"B<update-passwd> folgt der normalen GNU-Befehlszeilensyntax, bei der die "
-"Langform der Optionen mit zwei Minuszeichen beginnen (\\(oq-\\(cq)."
+"B<update-passwd> segue a sintaxe usual da linha de comandos GNU, com as "
+"opções longas a começar com duas barras (\\(oq-\\(cq)."
 
 # type: TP
 #. type: TP
 #: ../update-passwd.8:19
 #, no-wrap
 msgid "B<-p>,\\ B<--passwd-master=FILE>"
-msgstr "B<-p>,\\ B<--passwd-master=DATEI>"
+msgstr "B<-p>,\\ B<--passwd-master=FICHEIRO>"
 
 # type: Plain text
 #. type: Plain text
@@ -115,15 +117,15 @@ msgid ""
 "Use FILE as the master copy of the passwd database.  The default value is I</"
 "usr/share/base-passwd/passwd.master>."
 msgstr ""
-"DATEI als Kopiervorlage der Passwortdatenbank verwenden. Der Standardwert "
-"ist I</usr/share/base-passwd/passwd.master>."
+"Usa FICHEIRO como a cópia mestre da base de dados do passwd. O valor "
+"predefinido é I</usr/share/base-passwd/passwd.master>."
 
 # type: TP
 #. type: TP
 #: ../update-passwd.8:24
 #, no-wrap
 msgid "B<-g>,\\ B<--group-master=FILE>"
-msgstr "B<-g>,\\ B<--group-master=DATEI>"
+msgstr "B<-g>,\\ B<--group-master=FICHEIRO>"
 
 # type: Plain text
 #. type: Plain text
@@ -132,15 +134,15 @@ msgid ""
 "Use FILE as the master copy of the group database.  The default value is I</"
 "usr/share/base-passwd/group.master>."
 msgstr ""
-"DATEI als Kopiervorlage der Gruppendatenbank verwenden. Der Standardwert ist "
-"I</usr/share/base-passwd/group.master>."
+"Usa FICHEIRO como a cópia mestre da base de dados do grupo. O valor "
+"predefinido é I</usr/share/base-passwd/group.master>."
 
 # type: TP
 #. type: TP
 #: ../update-passwd.8:29
 #, no-wrap
 msgid "B<-P>,\\ B<--passwd=FILE>"
-msgstr "B<-P>,\\ B<--passwd=DATEI>"
+msgstr "B<-P>,\\ B<--passwd=FICHEIRO>"
 
 # type: Plain text
 #. type: Plain text
@@ -148,15 +150,15 @@ msgstr "B<-P>,\\ B<--passwd=DATEI>"
 msgid ""
 "Use FILE as the system passwd database.  The default value is I</etc/passwd>."
 msgstr ""
-"DATEI als Systemdatenbank von Passwd verwenden. Der Standardwert ist I</etc/"
-"passwd>."
+"Usa FICHEIRO como a base de dados do passwd do sistema. O valor predefinido "
+"é I</etc/passwd>."
 
 # type: TP
 #. type: TP
 #: ../update-passwd.8:34
 #, no-wrap
 msgid "B<-S>,\\ B<--shadow=FILE>"
-msgstr "B<-S>,\\ B<--shadow=DATEI>"
+msgstr "B<-S>,\\ B<--shadow=FICHEIRO>"
 
 # type: Plain text
 #. type: Plain text
@@ -164,15 +166,15 @@ msgstr "B<-S>,\\ B<--shadow=DATEI>"
 msgid ""
 "Use FILE as the system shadow database.  The default value is I</etc/shadow>."
 msgstr ""
-"DATEI als Systemdatenbank von Shadow verwenden. Der Standardwert ist I</etc/"
-"shadow>."
+"Usa FICHEIRO como a base de dados shadow do sistema. O valor predefinido é "
+"I</etc/shadow>."
 
 # type: TP
 #. type: TP
 #: ../update-passwd.8:39
 #, no-wrap
 msgid "B<-G>,\\ B<--group=FILE>"
-msgstr "B<-G>,\\ B<--group=DATEI>"
+msgstr "B<-G>,\\ B<--group=FICHEIRO>"
 
 # type: Plain text
 #. type: Plain text
@@ -180,8 +182,8 @@ msgstr "B<-G>,\\ B<--group=DATEI>"
 msgid ""
 "Use FILE as the system group database.  The default value is I</etc/group>."
 msgstr ""
-"DATEI als System-Gruppendatenbank verwenden. Der Standardwert ist I</etc/"
-"group>."
+"Usa FICHEIRO como a base de dados do grupo do sistema. O valor predefinido é "
+"I</etc/group>."
 
 # type: TP
 #. type: TP
@@ -194,7 +196,7 @@ msgstr "B<-s>,\\ B<--sanity-check>"
 #. type: Plain text
 #: ../update-passwd.8:47
 msgid "Only perform sanity-checks but don't do anything."
-msgstr "Nur Plausibilitätsprüfungen durchführen aber nichts ändern."
+msgstr "Apenas executa verificações de sanidade, não faz nada."
 
 # type: TP
 #. type: TP
@@ -204,15 +206,15 @@ msgid "B<-v>,\\ B<--verbose>"
 msgstr "B<-v>,\\ B<--verbose>"
 
 # type: Plain text
-# FIXME: s/about/about what/ 
+# FIXME: s/about/about what/
 #. type: Plain text
 #: ../update-passwd.8:51
 msgid ""
 "Give detailed information about what we are doing.  A second -v gives "
 "additional detail."
 msgstr ""
-"Detaillierte Informationen über die durchgeführten Maßnahmen angeben. Ein "
-"zweites »-v« liefert zusätzliche Details."
+"Fornece informação detalhada acerca do que está a ser feito. Um segundo -v "
+"oferece detalhes adicionais."
 
 # type: TP
 #. type: TP
@@ -225,7 +227,7 @@ msgstr "B<-n>,\\ B<--dry-run>"
 #. type: Plain text
 #: ../update-passwd.8:54
 msgid "Don't do anything but only show what we would do."
-msgstr "Nichts durchführen, nur zeigen, was getan würde."
+msgstr "Não faz nada, apenas mostra o que seria feito."
 
 # type: TP
 #. type: TP
@@ -242,9 +244,9 @@ msgid ""
 "debugging purposes.  B<I repeat: do not do this unless you are really sure "
 "you need this!>"
 msgstr ""
-"Nicht versuchen, die Datenbank zu sperren. Dies sollte nur bei der Suche "
-"nach Fehlern verwandt werden. B<Nochmal: Verwenden Sie dies nur, wenn Sie "
-"sich absolut sicher sind, dass Sie es benötigten!>"
+"Não tenta trancar a base de dados da conta. Isto só deve ser usado para "
+"objectivos de depuração. B<I repito: não faça isto a menos que tenha certeza "
+"que precisa disto!>"
 
 # type: TP
 #. type: TP
@@ -257,7 +259,7 @@ msgstr "B<-h>,\\ B<--help>"
 #. type: Plain text
 #: ../update-passwd.8:63
 msgid "Show a summary of how to use B<update-passwd>."
-msgstr "Eine Übersicht über die Verwendung von B<update-passwd> anzeigen."
+msgstr "Mostra um sumário de como usar o B<update-passwd>."
 
 # type: TP
 #. type: TP
@@ -270,13 +272,13 @@ msgstr "B<-V>,\\ B<--version>"
 #. type: Plain text
 #: ../update-passwd.8:66
 msgid "Show the version number"
-msgstr "Versionsnummer anzeigen"
+msgstr "Mostra o número da versão"
 
 #. type: SH
 #: ../update-passwd.8:66
 #, no-wrap
 msgid "ENVIRONMENT"
-msgstr "UMGEBUNG"
+msgstr "AMBIENTE"
 
 #. type: TP
 #: ../update-passwd.8:67
@@ -296,23 +298,22 @@ msgid ""
 "compat inclusion entry or whether to change the GECOS of a user are asked at "
 "low priority."
 msgstr ""
-"Falls diese Umgebungsvariable gesetzt ist und der Schalter B<--dry-run> "
-"nicht verwandt wurde, wird B<update-passwd> Debconf verwenden, um "
-"abzufragen, ob Änderungen vorgenommen werden sollen. Jede vorgeschlagene "
-"Änderung wird eine eigene Aufforderung hervorrufen. Benutzer- oder "
-"Gruppenentfernungen, UID- oder GID-Änderungen und Home-Verzeichnisänderungen "
-"werden mit hoher Priorität abgefragt. Benutzer- oder Gruppenhinzufügungen "
-"und Shell-Änderungen werden mit mittlerer Priorität abgefragt. Fragen, ob "
-"Einträge über den NIS-Compat-Einbindungseintrag verschoben werden sollen "
-"oder ob die GECOS eines Benutzers geändert werden sollen, erfolgen mit "
-"niedriger Priorität."
+"Se esta variável de ambiente é enviada e a bandeira B<--dry-run> não for "
+"fornecida, o B<update-passwd> usa debconf para perguntar se deve fazer "
+"alterações. Cada alteração proposta irá produzir uma questão separada. "
+"Remoções de utilizadores e grupos, alterações de UID e GID, e alterações do "
+"directório home serão perguntadas com alta prioridade. Adições de "
+"utilizadores e grupos e alterações de shell serão perguntadas com prioridade "
+"média. Questões sobre o mover entradas para lá da inclusão de "
+"compatibilidade NIS ou sobre alterações do GECOS de um utilizador serão "
+"perguntadas com prioridade baixa."
 
 # type: SH
 #. type: SH
 #: ../update-passwd.8:81
 #, no-wrap
 msgid "BUGS"
-msgstr "FEHLER"
+msgstr "BUGS"
 
 # type: Plain text
 #. type: Plain text
@@ -322,10 +323,9 @@ msgid ""
 "check if the entries in the passwd are also in shadow and vice versa, and "
 "that passwords are not present in both files."
 msgstr ""
-"Derzeit überprüft B<update-passwd> die Shadow-Datei nicht. Es sollte prüfen, "
-"ob die Einträge in der Passwd-Datei auch in der Shadow-Datei und umgekehrt "
-"sind. Auch sollte geprüft werden, dass Passwörter nicht in beiden Dateien "
-"vorkommen."
+"Até este momento o B<update-passwd> não verifica o ficheiro-shadow. Deveria "
+"verificar se as entradas em passwd estão também em shadow e vice-versa, e se "
+"essas palavras-passe não estão presentes em ambos ficheiros."
 
 # type: SH
 #. type: SH
@@ -348,6 +348,6 @@ msgid ""
 "1999\\(en2002 Wichert Akkerman and copyright 2002, 2003 Colin Watson.  It is "
 "distributed under version 2 of the GNU General Public License."
 msgstr ""
-"Dieses Programm wurde für das Debian-Projekt geschrieben und unterliegt dem "
-"Copyright 1999\\(en2002 Wichert Akkerman und 2002, 2003 Colin Watson. Es "
-"wird unter Version 2 der GNU General Public License vertrieben."
+"Este programa foi escrito para o projecto Debian, e tem copyright "
+"1999\\(en2002 Wichert Akkerman e copyright 2002, 2003 Colin Watson. É "
+"distribuído sob a versão 2 da GNU General Public License."
