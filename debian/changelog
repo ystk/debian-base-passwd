@@ -1,3 +1,35 @@
+base-passwd (3.5.37) unstable; urgency=medium
+
+  * Debconf translations:
+    - Dutch (thanks, Frans Spiesschaert; closes: #765361).
+    - Danish (thanks, Joe Hansen; closes: #765853).
+  * Copy /etc/passwd and /etc/group from the master files in the preinst on
+    initial install, to be more tolerant of bootstrapping tools that
+    configure the Essential set in slightly different orders (based on a
+    patch from Michael Tautschnig; see #766459 and #767999).
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 07 Nov 2014 15:44:29 +0000
+
+base-passwd (3.5.36) unstable; urgency=medium
+
+  * Update Vcs-Browser URL yet again.
+
+ -- Colin Watson <cjwatson@debian.org>  Thu, 04 Sep 2014 17:21:43 +0100
+
+base-passwd (3.5.35) unstable; urgency=medium
+
+  * Build with all hardening options (thanks, Markus).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 31 Aug 2014 18:15:08 +0100
+
+base-passwd (3.5.34) unstable; urgency=medium
+
+  * Debconf translations:
+    - Italian (thanks, Beatrice Torracca; closes: #744344).
+  * Update Vcs-Browser URL for alioth cgit.
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 30 Aug 2014 18:10:48 +0100
+
 base-passwd (3.5.33) unstable; urgency=medium
 
   * Debconf translations:
